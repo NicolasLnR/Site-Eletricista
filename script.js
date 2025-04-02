@@ -44,7 +44,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add click event to back to top button
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
@@ -52,22 +51,50 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Animation for services section
-function checkVisibility() {
-    const serviceCards = document.querySelectorAll('.service-card');
+// Initialize Location Map
+document.addEventListener('DOMContentLoaded', () => {
+    // Coordenadas para Estr. das Lágrimas, 2501 - São João Climaco, São Paulo - SP
+    const baseLocation = [-23.6208, -46.5932]; // Latitude, Longitude
     
-    serviceCards.forEach(card => {
-        const cardPosition = card.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (cardPosition.top < windowHeight * 0.9) {
-            card.style.opacity = '1';
+    // Inicializar o mapa
+    const map = L.map('locationMap').setView(baseLocation, 12);
+    
+    // Adicionar o mapa base (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    // Adicionar marcador para a localização base
+    const baseMarker = L.marker(baseLocation).addTo(map);
+    baseMarker.bindPopup('<strong>Xavier Soares - Eletricista</strong><br>Estr. das Lágrimas, 2501<br>São João Climaco, São Paulo - SP').openPopup();
+    
+    // Adicionar círculo para mostrar o raio de 20km
+    const radiusCircle = L.circle(baseLocation, {
+        color: '#0066cc',
+        fillColor: '#0066cc',
+        fillOpacity: 0.1,
+        radius: 20000 // 20km em metros
+    }).addTo(map);
+    
+    // Ajustar o mapa ao tamanho do contêiner quando a janela for redimensionada
+    window.addEventListener('resize', () => {
+        map.invalidateSize();
+    });
+});
+
+// Animação para os cards de serviço
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
         }
     });
-}
+}, observerOptions);
 
-// Check visibility on scroll
-window.addEventListener('scroll', checkVisibility);
-
-// Check visibility on page load
-window.addEventListener('load', checkVisibility);
+document.querySelectorAll('.service-card').forEach(card => {
+    observer.observe(card);
+});
