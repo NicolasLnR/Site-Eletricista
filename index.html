@@ -6,6 +6,7 @@
     <title>Xavier Soares - Eletricista em São Paulo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
 </head>
 <body>
     <!-- Header -->
@@ -30,6 +31,7 @@
     <div class="mobile-menu">
         <a href="#services">Serviços</a>
         <a href="#benefits">Vantagens</a>
+        <a href="#location">Área de Atendimento</a>
         <a href="#contact">Contato</a>
         <a href="https://wa.me/5511959785374" target="_blank">
             <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
@@ -168,6 +170,42 @@
         </div>
     </section>
 
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Área de Atendimento</h2>
+                <p>Atendemos em toda a região de São Paulo, em um raio de até 20km da nossa base. Confira se sua localização está dentro da nossa área de cobertura!</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="location-address">
+                        <h3>Endereço Base:</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Estr. das Lágrimas, 2501 - São João Climaco, São Paulo - SP, 04244-000</p>
+                    </div>
+                    <div class="location-radius">
+                        <h3>Raio de Atendimento:</h3>
+                        <p><i class="fas fa-ruler"></i> 20km a partir do nosso endereço base</p>
+                    </div>
+                    <div class="location-areas">
+                        <h3>Principais Bairros Atendidos:</h3>
+                        <ul>
+                            <li>São João Climaco</li>
+                            <li>Ipiranga</li>
+                            <li>Vila Prudente</li>
+                            <li>Sacomã</li>
+                            <li>Jabaquara</li>
+                            <li>Vila Mariana</li>
+                            <li>Mooca</li>
+                            <li>E muitos outros dentro do nosso raio!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="locationMap" class="location-map"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="container">
@@ -194,7 +232,7 @@
                     <h3>Contato</h3>
                     <div class="contact-info">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>São Paulo, SP</div>
+                        <div>Estr. das Lágrimas, 2501 - São João Climaco, São Paulo - SP</div>
                     </div>
                     <div class="contact-info">
                         <i class="fab fa-whatsapp"></i>
@@ -210,6 +248,7 @@
                     <ul>
                         <li><a href="#services">Serviços</a></li>
                         <li><a href="#benefits">Vantagens</a></li>
+                        <li><a href="#location">Área de Atendimento</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
@@ -231,6 +270,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
