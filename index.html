@@ -3,61 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xavier Soares - Eletricista em São Paulo</title>
+    <title>Xavier Soares - Eletricista Profissional em São Paulo</title>
+    <meta name="description" content="Serviços elétricos profissionais em São Paulo. Atendimento rápido, qualidade garantida e preços justos.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="header-content">
             <div class="logo">
-                <i class="fas fa-bolt" style="color: var(--primary); font-size: 24px;"></i>
-                <h1>Xavier <span>Soares</span></h1>
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Xavier <span>Soares</span></h1>
+                    <p class="logo-subtitle">Eletricista Profissional</p>
+                </div>
             </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="contact-header">
-                <a href="https://wa.me/5511959785374" target="_blank">
-                    <i class="fab fa-whatsapp"></i> (11) 95978-5374
+            
+            <nav class="desktop-nav">
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#benefits" class="nav-link">Diferenciais</a>
+                <a href="#gallery" class="nav-link">Trabalhos</a>
+                <a href="#location" class="nav-link">Localização</a>
+                <a href="#testimonials" class="nav-link">Depoimentos</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/5511959785374" target="_blank" class="btn-whatsapp-header">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
                 </a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-        <a href="#services">Serviços</a>
-        <a href="#benefits">Vantagens</a>
-        <a href="#location">Área de Atendimento</a>
-        <a href="#contact">Contato</a>
-        <a href="https://wa.me/5511959785374" target="_blank">
-            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-        </a>
+        <div class="mobile-menu-content">
+            <a href="#services" class="mobile-link">
+                <i class="fas fa-tools"></i>
+                <span>Serviços</span>
+            </a>
+            <a href="#benefits" class="mobile-link">
+                <i class="fas fa-star"></i>
+                <span>Diferenciais</span>
+            </a>
+            <a href="#gallery" class="mobile-link">
+                <i class="fas fa-images"></i>
+                <span>Trabalhos</span>
+            </a>
+            <a href="#location" class="mobile-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Localização</span>
+            </a>
+            <a href="#testimonials" class="mobile-link">
+                <i class="fas fa-comments"></i>
+                <span>Depoimentos</span>
+            </a>
+            <a href="https://wa.me/5511959785374" target="_blank" class="mobile-link mobile-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chamar no WhatsApp</span>
+            </a>
+        </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="animated-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
         <div class="container hero-content">
-            <h2>🔧 Eletricista de Confiança em São Paulo 🔧</h2>
-            <p>Precisando de serviços elétricos profissionais? Conte com Xavier Soares, seu eletricista especializado em São Paulo. Atendimento rápido e serviço de qualidade!</p>
+            <div class="hero-badge">
+                <i class="fas fa-certificate"></i>
+                <span>Profissional Certificado</span>
+            </div>
+            <h2 class="hero-title">
+                Soluções Elétricas <span class="gradient-text">Profissionais</span> em São Paulo
+            </h2>
+            <p class="hero-description">
+                Atendimento rápido, diagnóstico preciso e serviço de qualidade. Resolva seus problemas elétricos com segurança e garantia!
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Satisfação</div>
+                </div>
+            </div>
             <div class="hero-buttons">
                 <a href="https://wa.me/5511959785374" class="btn btn-primary" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Solicitar Orçamento</span>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#services" class="btn btn-secondary">Conheça Nossos Serviços</a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-tools"></i>
+                    <span>Nossos Serviços</span>
+                </a>
             </div>
+            <div class="hero-trust">
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Serviço Garantido</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Atendimento Rápido</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-award"></i>
+                        <span>Qualidade Comprovada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Role para explorar</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Nossos Serviços</h2>
-                <p>Oferecemos soluções completas para todas as suas necessidades elétricas residenciais e comerciais.</p>
+            <div class="section-header">
+                <span class="section-tag">O que fazemos</span>
+                <h2 class="section-title">Serviços <span class="gradient-text">Especializados</span></h2>
+                <p class="section-description">
+                    Soluções completas para todas as suas necessidades elétricas, residenciais e comerciais
+                </p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -65,21 +166,33 @@
                         <i class="fas fa-plug"></i>
                     </div>
                     <h3>Instalação e Reparos</h3>
-                    <p>Instalação e reparos de tomadas, interruptores e disjuntores com segurança e garantia.</p>
+                    <p>Instalação e reparos de tomadas, interruptores e disjuntores com segurança e garantia total.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Diagnóstico gratuito</span>
+                        <span><i class="fas fa-check"></i> Garantia de 90 dias</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shower"></i>
                     </div>
                     <h3>Chuveiros e Ventiladores</h3>
-                    <p>Troca e manutenção de chuveiros e ventiladores de teto, garantindo eficiência e segurança.</p>
+                    <p>Troca e manutenção de chuveiros e ventiladores de teto com eficiência e segurança.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Instalação rápida</span>
+                        <span><i class="fas fa-check"></i> Materiais de qualidade</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3>Iluminação</h3>
-                    <p>Instalação de luminárias, spots e painéis de LED para ambientes mais modernos e econômicos.</p>
+                    <h3>Iluminação LED</h3>
+                    <p>Instalação de luminárias, spots e painéis de LED para ambientes modernos e econômicos.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Economia de energia</span>
+                        <span><i class="fas fa-check"></i> Design moderno</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -87,41 +200,65 @@
                     </div>
                     <h3>Curtos-Circuitos</h3>
                     <p>Identificação rápida e solução eficiente de curtos-circuitos para evitar acidentes.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Atendimento emergencial</span>
+                        <span><i class="fas fa-check"></i> Disponível 24h</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-charging-station"></i>
                     </div>
                     <h3>Quadro de Energia</h3>
-                    <p>Aumento de carga e modernização do quadro de energia para maior segurança e eficiência.</p>
+                    <p>Aumento de carga e modernização do quadro de energia para maior segurança.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Projeto personalizado</span>
+                        <span><i class="fas fa-check"></i> Conformidade com normas</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-snowflake"></i>
                     </div>
                     <h3>Ar-Condicionado</h3>
-                    <p>Instalação de fiação para ar-condicionado, garantindo funcionamento adequado e seguro.</p>
+                    <p>Instalação de fiação para ar-condicionado com funcionamento adequado e seguro.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Circuito dedicado</span>
+                        <span><i class="fas fa-check"></i> Segurança garantida</span>
+                    </div>
                 </div>
-        <div class="service-card">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-house"></i>
                     </div>
-                    <h3>Atendimento domiciliar</h3>
-                    <p>Atendimento seguro e em residência, com emissão de nota fiscal para garantir a integridade.</p>
-                </div>
-        <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-plug"></i>
+                    <h3>Atendimento Residencial</h3>
+                    <p>Serviços completos em residências com emissão de nota fiscal.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Profissional certificado</span>
+                        <span><i class="fas fa-check"></i> Nota fiscal</span>
                     </div>
-                    <h3>Atendimento industrial</h3>
-                    <p>Atendemos em ambiente industrial de forma prática e segura, com emissão de nota para garantir integridade comercial.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Atendimento Industrial</h3>
+                    <p>Soluções elétricas para ambientes industriais com segurança e eficiência.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Alta voltagem</span>
+                        <span><i class="fas fa-check"></i> Manutenção preventiva</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Adequação às Normas</h3>
-                    <p>Adequação de instalações para normas de segurança, garantindo tranquilidade e conformidade.</p>
+                    <p>Adequação de instalações para normas de segurança e conformidade legal.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Laudo técnico</span>
+                        <span><i class="fas fa-check"></i> ART incluída</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,54 +267,218 @@
     <!-- Benefits Section -->
     <section class="benefits" id="benefits">
         <div class="container">
-            <div class="section-title">
-                <h2>Por Que Escolher Nossos Serviços</h2>
-                <p>Contar com um profissional experiente faz toda a diferença. Deixe seus problemas elétricos, pintura, reforma e manutenção com quem entende!</p>
+            <div class="section-header">
+                <span class="section-tag">Nossos Diferenciais</span>
+                <h2 class="section-title">Por Que Escolher a <span class="gradient-text">Xavier Soares</span></h2>
+                <p class="section-description">
+                    Experiência, qualidade e compromisso em cada serviço realizado
+                </p>
             </div>
-            <div class="benefits-list">
-                <div class="benefit-item">
+            <div class="benefits-grid">
+                <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-user-check"></i>
                     </div>
-                    <div class="benefit-text">
-                        <h3>Diagnóstico Preciso</h3>
-                        <p>Chega de soluções temporárias! Identificamos e resolvemos o problema na raiz.</p>
+                    <h3>Diagnóstico Preciso</h3>
+                    <p>Identificamos e resolvemos o problema na raiz, sem soluções temporárias.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Serviço Rápido</h3>
+                    <p>Atendimento ágil e solução definitiva para seus problemas elétricos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Materiais Premium</h3>
+                    <p>Utilizamos peças de alta qualidade e duráveis.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Melhor Custo-Benefício</h3>
+                    <p>Preços justos e transparentes sem cobranças ocultas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergência 24h</h3>
+                    <p>Atendimento de emergência para situações urgentes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Garantia Total</h3>
+                    <p>Todos os serviços com garantia de 90 dias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Gallery Section -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Nosso Portfólio</span>
+            <h2 class="section-title">Trabalhos <span class="gradient-text">Realizados</span></h2>
+            <p class="section-description">
+                Confira alguns dos serviços que realizamos com qualidade e profissionalismo
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="imagem1.jpeg" alt="Instalação elétrica residencial">
+                <div class="gallery-overlay">
+                    <h4>Instalação Residencial</h4>
+                    <p>Fiação completa</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem2.jpeg" alt="Manutenção de quadro de energia">
+                <div class="gallery-overlay">
+                    <h4>Quadro de Energia</h4>
+                    <p>Modernização completa</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem3.jpeg" alt="Troca de fiação elétrica">
+                <div class="gallery-overlay">
+                    <h4>Troca de Fiação</h4>
+                    <p>Segurança garantida</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem4.jpeg" alt="Instalação de luminárias de LED">
+                <div class="gallery-overlay">
+                    <h4>Iluminação LED</h4>
+                    <p>Economia e modernidade</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem5.jpeg" alt="Serviço elétrico adicional">
+                <div class="gallery-overlay">
+                    <h4>Serviço Especial</h4>
+                    <p>Trabalho premium</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem6.jpeg" alt="Serviço elétrico adicional">
+                <div class="gallery-overlay">
+                    <h4>Instalação Técnica</h4>
+                    <p>Alta performance</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem7.jpeg" alt="Serviço elétrico adicional">
+                <div class="gallery-overlay">
+                    <h4>Manutenção Avançada</h4>
+                    <p>Diagnóstico completo</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imagem8.jpeg" alt="Serviço elétrico adicional">
+                <div class="gallery-overlay">
+                    <h4>Manutenção Avançada</h4>
+                    <p>Diagnóstico completo</p>
+                </div>
+            </div>
+
+        </div> <!-- fecha gallery-grid -->
+
+    </div> <!-- fecha container -->
+</section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O Que Dizem Nossos <span class="gradient-text">Clientes</span></h2>
+                <p class="section-description">
+                    A satisfação dos nossos clientes é nossa maior recompensa
+                </p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Boa tarde, precisei de um profissional pra resolver uma situação elétrica.
+O Claudinei me atendeu com muita presteza, educado, atencioso, cuidadoso.
+Eu super indico.
+Excelente profissional."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Gleid Selma</h4>
+                            <span>Vila Prudente</span>
+                        </div>
                     </div>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-check-circle"></i>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="benefit-text">
-                        <h3>Serviço Rápido e Eficiente</h3>
-                        <p>Atendimento ágil e solução definitiva para seus problemas elétricos.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="benefit-text">
-                        <h3>Materiais de Qualidade</h3>
-                        <p>Utilizamos peças duráveis para evitar dores de cabeça futuras.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="benefit-text">
-                        <h3>Evite Gastos Desnecessários</h3>
-                        <p>Conte com um serviço profissional desde o início para economizar tempo e dinheiro.</p>
+                    <p class="testimonial-text">
+                        "Mostrou a origem do problema e resolveu. Deu garantia de 6 meses! Gostei. Pode contratar q ele eh atencioso e entende do assunto"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Eliete da Silva Rodrigues</h4>
+                            <span>Ipiranga</span>
+                        </div>
                     </div>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-check-circle"></i>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="benefit-text">
-                        <h3>Atendimento de Emergência</h3>
-                        <p>Problemas elétricos não podem esperar! Estamos prontos para atender rapidamente.</p>
+                    <p class="testimonial-text">
+                        "Ótimo trabalho, veio aqui em casa no horário certinho e arrumou minha afiação muito rápido, recomendo!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Henrique Duarte</h4>
+                            <span>Vila Mariana</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -187,32 +488,50 @@
     <!-- Location Section -->
     <section class="location" id="location">
         <div class="container">
-            <div class="section-title">
-                <h2>Área de Atendimento</h2>
-                <p>Atendemos em toda a região de São Paulo, em um raio de até 20km da nossa base. Confira se sua localização está dentro da nossa área de cobertura!</p>
+            <div class="section-header">
+                <span class="section-tag">Onde Atendemos</span>
+                <h2 class="section-title">Área de <span class="gradient-text">Atendimento</span></h2>
+                <p class="section-description">
+                    Atendemos em toda a região de São Paulo, em um raio de até 20km
+                </p>
             </div>
             <div class="location-content">
                 <div class="location-info">
-                    <div class="location-address">
-                        <h3>Endereço Base:</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Estr. das Lágrimas, 2501 - São João Climaco, São Paulo - SP, 04244-000</p>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Endereço Base</h3>
+                            <p>Estr. das Lágrimas, 2501 - São João Climaco<br>São Paulo - SP, 04244-000</p>
+                        </div>
                     </div>
-                    <div class="location-radius">
-                        <h3>Raio de Atendimento:</h3>
-                        <p><i class="fas fa-ruler"></i> 20km a partir do nosso endereço base</p>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-ruler"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Raio de Atendimento</h3>
+                            <p>Até 20km a partir do nosso endereço base</p>
+                        </div>
                     </div>
-                    <div class="location-areas">
-                        <h3>Principais Bairros Atendidos:</h3>
-                        <ul>
-                            <li>São João Climaco</li>
-                            <li>Ipiranga</li>
-                            <li>Vila Prudente</li>
-                            <li>Sacomã</li>
-                            <li>Jabaquara</li>
-                            <li>Vila Mariana</li>
-                            <li>Mooca</li>
-                            <li>E muitos outros dentro do nosso raio!</li>
-                        </ul>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Principais Bairros</h3>
+                            <div class="neighborhoods">
+                                <span>São João Climaco</span>
+                                <span>Ipiranga</span>
+                                <span>Vila Prudente</span>
+                                <span>Sacomã</span>
+                                <span>Jabaquara</span>
+                                <span>Vila Mariana</span>
+                                <span>Mooca</span>
+                                <span>E muitos outros!</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="locationMap" class="location-map"></div>
@@ -221,39 +540,41 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" id="contact">
+    <section class="cta">
         <div class="container">
-            <h2>💦 Confie em quem tem experiência e compromisso com a qualidade!</h2>
-            <p>Precisando de um eletricista confiável em São Paulo? Entre em contato agora mesmo e resolva seus problemas elétricos de uma vez por todas!</p>
-            <a href="https://wa.me/5511959785374" class="cta-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Chamar no WhatsApp: (11) 95978-5374
-            </a>
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h2>Precisa de um Eletricista Agora?</h2>
+                <p>Entre em contato e resolva seus problemas elétricos com rapidez e segurança!</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5511959785374" class="cta-button primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Chamar no WhatsApp</span>
+                    </a>
+                    <a href="tel:+5511959785374" class="cta-button secondary">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 95978-5374</span>
+                    </a>
+                </div>
+                <div class="cta-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Seg a Sáb: 7h às 20h</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Atendimento com Segurança</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Nota Fiscal Garantida</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-<!-- Gallery Section -->
-<section class="gallery" id="gallery">
-    <div class="container">
-        <div class="section-title">
-            <h2>Trabalhos Realizados</h2>
-            <p>Confira alguns dos serviços que já realizamos com qualidade e profissionalismo.</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="imagem1.jpeg" alt="Instalação elétrica residencial">
-            </div>
-            <div class="gallery-item">
-                <img src="imagem2.jpeg" alt="Manutenção de quadro de energia">
-            </div>
-            <div class="gallery-item">
-                <img src="imagem3.jpeg" alt="Troca de fiação elétrica">
-            </div>
-            <div class="gallery-item">
-                <img src="imagem4.jpeg" alt="Instalação de luminárias de LED">
-            </div>
-        </div>
-    </div>
-</section>
-
 
     <!-- Footer -->
     <footer>
@@ -261,54 +582,84 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <i class="fas fa-bolt" style="color: var(--primary); font-size: 24px;"></i>
-                        <h2>Xavier <span>Soares</span></h2>
+                        <div class="logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h2>Xavier <span>Soares</span></h2>
+                            <p>Eletricista Profissional</p>
+                        </div>
                     </div>
-                    <p>Eletricista profissional com anos de experiência, oferecendo serviços de qualidade em toda São Paulo. Compromisso com a satisfação do cliente e trabalho bem feito.</p>
+                    <p class="footer-description">
+                        Eletricista profissional com anos de experiência, oferecendo serviços de qualidade em toda São Paulo. Compromisso com a satisfação do cliente e trabalho bem feito.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/5511959785374" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+5511959785374" title="Telefone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:xavier.soares1113@gmail.com" title="E-mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-contact">
                     <h3>Contato</h3>
                     <div class="contact-info">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>Estr. das Lágrimas, 2501 - São João Climaco, São Paulo - SP</div>
+                        <div>Estr. das Lágrimas, 2501<br>São João Climaco, São Paulo - SP</div>
                     </div>
                     <div class="contact-info">
                         <i class="fab fa-whatsapp"></i>
                         <div>(11) 95978-5374</div>
                     </div>
-                   <div class="contact-info">
+                    <div class="contact-info">
                         <i class="fas fa-envelope"></i>
                         <div>xavier.soares1113@gmail.com</div>
                     </div>
                     <div class="contact-info">
                         <i class="fas fa-clock"></i>
-                        <div>Horário de Atendimento:<br>Segunda a Sábado: 7h às 20h</div>
+                        <div>Segunda a Sábado<br>7h às 20h</div>
                     </div>
                 </div>
                 <div class="footer-links">
                     <h3>Links Rápidos</h3>
                     <ul>
                         <li><a href="#services">Serviços</a></li>
-                        <li><a href="#benefits">Vantagens</a></li>
-                        <li><a href="#location">Área de Atendimento</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#benefits">Diferenciais</a></li>
+                        <li><a href="#gallery">Trabalhos</a></li>
+                        <li><a href="#location">Localização</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Xavier Soares - Eletricista em São Paulo. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Xavier Soares - Eletricista Profissional. Todos os direitos reservados.</p>
             </div>
         </div>
+<section class="spin-section">
+    <h2 class="section-title">Gire a Roleta</h2>
+    <p class="section-description">Tente a sorte e veja qual serviço você ganha desconto!</p>
+
+    <div class="wheel-container">
+        <canvas id="wheel" width="350" height="350"></canvas>
+
+        <button id="spinButton" class="spin-button">Girar</button>
+    </div>
+
+    <div id="spinResult" class="spin-result"></div>
+</section>
     </footer>
 
-
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511959785374" class="floating-whatsapp" target="_blank" title="Enviar mensagem no WhatsApp">
+    <a href="https://wa.me/5511959785374" class="floating-whatsapp" target="_blank" aria-label="Enviar mensagem no WhatsApp" title="Chamar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top Button -->
-    <div class="back-to-top" title="Voltar ao topo">
+    <div class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </div>
 
